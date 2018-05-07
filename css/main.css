@@ -1,0 +1,42 @@
+body{
+    background:linear-gradient(135deg, #01579b 0%, #039be5 100%);
+}
+
+#button {
+    color: #f7f7f7;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 12.54em;
+    padding: .94em;
+    border: 2px solid #f7f7f7;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    transition: .5s; 
+}
+
+#button::after {
+    content: '';
+    width: 0%;
+    height: 120%;
+    position: absolute;
+    right: -10%;
+    bottom: 0;
+    background-color: #01579b;
+    transform: skewX(15deg);
+    z-index: -1;
+    transition: .5s;
+}
+
+#button:hover {
+    cursor: pointer;
+    color: #039be5;
+}
+
+#button:hover::after {
+    right: -10%;
+    width: 17em;
+}
